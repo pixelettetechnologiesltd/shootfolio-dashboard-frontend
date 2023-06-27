@@ -27,8 +27,8 @@ const Loginform = () => {
   };
   const dispatch = useDispatch();
   const navigate=useNavigate();
-  const { data ,isError } = useGetGameQuery();
-  const gameinfo = data?.data?.data || [];
+  // const { data ,isError } = useGetGameQuery();
+  // const gameinfo = data?.data?.data || [];
   const { userInfo } = useSelector((state) => state.auth);
   const [login, { isLoading }] = useLoginMutation();
   const submitHandler = async (e) => {
@@ -43,7 +43,7 @@ const Loginform = () => {
       try {
         const res = await login({ email, password }).unwrap();
         dispatch(setCredentails({ ...res }));
-        dispatch(showGame(gameinfo));
+        //dispatch(showGame(gameinfo));
         //toast.success(res?.status);
         navigate("/dashboard")
       } catch (err) {
