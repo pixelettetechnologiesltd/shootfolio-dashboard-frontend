@@ -135,7 +135,7 @@ const Sidebar = () => {
             }}
           >
             <FaGamepad />
-            <span className="dashboard-text">Game Setup</span>
+            <span className="dashboard-text">Game Setup</span>  
           </NavLink>
           <div className={`subMenu${isSubMenuVisible ? "show" : "hide"}`}>
             {isSubMenuVisible && (

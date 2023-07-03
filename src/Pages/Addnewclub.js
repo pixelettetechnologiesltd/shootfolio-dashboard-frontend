@@ -52,7 +52,7 @@ const Addnewclub = () => {
                                         <Form.Control className='makeinputborder' type="text" placeholder="PFC" />
                                     </Form.Group>
                                     <Form.Group className="mb-4" controlId="switch">
-                                        <Form.Label className="makelabelleft">status</Form.Label>
+                                        <Form.Label className="makelabelleft">Status</Form.Label>
                                         <Form.Check 
                                             type="switch"
                                             id="custom-switch"

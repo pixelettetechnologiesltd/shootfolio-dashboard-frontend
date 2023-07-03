@@ -43,28 +43,25 @@ const Addportfolioinclub = () => {
                   </Form.Group>
                   <Form.Group className="mb-4" controlId="formGroupText">
                     <Form.Label className="makelabelleft">Number of Units</Form.Label>
-                    <Form.Control
-                      className='makeinputborder'
-                      type="number"
-                      id="exampleNumberInput"
-                      defaultValue="0.00"
-                      min="0.00"
-                      step="0.01"
-                      title="Choose your Number"
-                    />
+                    <InputGroup className="mb-4">
+                      <Button variant="outline-secondary" id="buttonnumberone">+</Button>
+                      <Form.Control  className=" makeinputborderandmakeinputcenter" type="number" placeholder="$35,000" />
+                      <Button variant="outline-secondary" id="buttonnumbertwo">-</Button>
+
+                    </InputGroup>
                   </Form.Group>
 
                   <Form.Group className="mb-4" controlId="formGroupText">
                     <Form.Label className="makelabelleft">Price</Form.Label>
-                    <InputGroup className="mb-3">
+                    <InputGroup className="mb-3 linkbuttonright">
                       <Form.Control
-                      className='makeinputborder'
+                        className='makeinputborder'
                         placeholder="Pick price from Coinmarketcap.com"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
                       />
-                      <Button className='formgroupbuttojn' variant="outline-secondary" id="button-addon2">
-                       <RiExternalLinkLine/>
+                      <Button className='formgroupbuttojn' variant="outline-secondary" id="buttonlink">
+                        <RiExternalLinkLine />
                       </Button>
                     </InputGroup>
                   </Form.Group>

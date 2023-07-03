@@ -22,6 +22,9 @@
     border: 2px solid #BDBDBD;
     background-color: transparent;
     color: #adadad;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-radius: 10px !important;
 }
 .removebgupload, .removebgupload:focus{
     background-color: transparent;
@@ -32,7 +35,7 @@ label.form-check-label{
     margin-left: 20px;
 }
 .form-switch .form-check-input, .form-switch .form-check-input:focus{
-    background-color: #FFFFFF40;
+    background-color: #2a774177;
     width: 2.5em;
     height: 20px;
     border: none;
