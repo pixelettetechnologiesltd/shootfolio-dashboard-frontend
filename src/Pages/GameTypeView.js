@@ -6,6 +6,7 @@ import "./../Assets/Css/table.css";
 import Popup from "../Components/Common/Popup";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
+import Menu from "../Components/Menu";
 import {
   useDeleteGameMutation,
   useGetOneGameMutation,
@@ -50,6 +51,8 @@ const GameTypeView = () => {
   };
 
   return (
+    <div>
+    <Menu/>
     <Container fluid className="sidebar">
       <Row className="h-100">
         <Col
@@ -117,6 +120,7 @@ const GameTypeView = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 

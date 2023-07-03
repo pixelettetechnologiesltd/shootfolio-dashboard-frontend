@@ -19,12 +19,27 @@ import GameTypeView from "./Pages/GameTypeView"
 import GameModesView from "./Pages/GameModesView"
 import GameLeagueView from "./Pages/GameLeagueView"
 import ClubTeamView from "./Pages/ClubTeamView"
+import Shootfolioclubs from "./Pages/Shootfolioclubs";
+import Addnewclub from "./Pages/Addnewclub";
+import Addportfolioclub from "./Pages/Addportfolioclub";
+import Defineleaguetype from "./Pages/Defineleaguetype";
+import Addnewleague from "./Pages/Addnewleague";
+import Gameplaymode from "./Pages/Gameplaymode";
 function App() {
   return (
     <div className="app">
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
+            
+              <Route path="/Dashboard/game/shootfolioclubs" element={<Shootfolioclubs/>}></Route>
+              <Route path="/Dashboard/game/addnewclub" element={<Addnewclub/>}></Route>
+              <Route path="/Dashboard/game/addportfolioclub" element={<Addportfolioclub/>}></Route>
+              <Route path="/Dashboard/game/defineleaguetype" element={<Defineleaguetype/>}></Route>
+              <Route path="/Dashboard/game/addnewleague" element={<Addnewleague/>}></Route>
+              <Route path="/Dashboard/game/gameplaymode" element={<Gameplaymode/>}></Route>
+
+
             <Route path="/" element={<Index />}>
               <Route path="/" element={<Login />}></Route>
               <Route path="/" element={<PrivateRoute/>}>
@@ -41,7 +56,6 @@ function App() {
               <Route path="/Dashboard/setting" element={<Setting />}></Route>
               <Route path="/Dashboard/game/game-add" element={<GameAdd/>}></Route>
               <Route path="/Dashboard/game/view-gameType" element={<GameTypeView/>}></Route>
-              
               <Route path="/Dashboard/game/game-modes" element={<GameModes/>}></Route>
               <Route path="/Dashboard/game/view-gameMode" element={<GameModesView/>}></Route>
               <Route path="/Dashboard/game/game-league" element={<GameLeague/>}></Route>
