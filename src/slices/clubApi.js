@@ -12,7 +12,14 @@ export const clubApi = apiSlice.injectEndpoints({
       }),
       
     }),
-  
+    portFolioAdd: builder.mutation({
+      query: (data) => ({
+        url: `${USERS_URL}/game/portFolioAdd`,
+        method: "POST",
+        body: data,
+      }),
+      
+    }),
     getClub: builder.query({
       query: () => ({
         url: `${USERS_URL}/game/clubGet`,
@@ -50,4 +57,5 @@ export const {
   useDeleteClubMutation,
   useGetOneClubMutation,
   useUpdateOneClubMutation,
+  usePortFolioAddMutation
 } = clubApi;

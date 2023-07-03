@@ -88,9 +88,24 @@ const Sidebar = () => {
         </Nav.Item>
         <Nav.Item>
           <NavLink
+            to="/dashboard/game/gameplaymode"
+            className="nav-link"
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><BiFootball/></span>
+            <span className="dashboard-text">Define Game</span>
+          </NavLink>
+        </Nav.Item>
+        <Nav.Item>
+          <NavLink
             to="/dashboard/game/shootfolioclubs"
             className="nav-link"
-            onClick={handleSidebarItemClick}
             style={({ isActive }) => {
               return {
                 fontWeight: isActive ? "bold" : "",
@@ -103,7 +118,23 @@ const Sidebar = () => {
             <span className="dashboard-text">Shootfolio Club</span>
           </NavLink>
         </Nav.Item>
-
+        <Nav.Item>
+          <NavLink
+            to="/dashboard/game/defineleaguetype"
+            className="nav-link"
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><BiFootball/></span>
+            <span className="dashboard-text">Define League</span>
+          </NavLink>
+        </Nav.Item>
+       
         <Nav.Item>
           <NavLink
             to="/dashboard/performance"

@@ -5,10 +5,10 @@ import { Container, Row, Col,Button } from "react-bootstrap";
 import { BiFootball } from "react-icons/bi";
 import "../Assets/Css/Shootfolioclubs.css"
 import {Clubsmap} from '../Components/Clubsmap';
+import { Link } from 'react-router-dom';
 const Shootfolioclubs = () => {
   return (
     <div>
- <Menu/>
     <Container fluid className="sidebar">
       <Row className="h-100">
         <Col
@@ -31,7 +31,7 @@ const Shootfolioclubs = () => {
                 </Col>
                 <Col md={5}></Col>
                 <Col md={3} className='makebuttonalignend'>
-                    <Button href="/Dashboard/game/addnewclub" className='addnewshhotfolioclubbutton'> + Add New Club</Button>
+                    <Link to="/Dashboard/game/addnewclub" className='addnewshhotfolioclubbutton'> + Add New Club</Link>
                 </Col>
             </Row>
             <Row>

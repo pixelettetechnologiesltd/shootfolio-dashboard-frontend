@@ -2,7 +2,7 @@ import React from 'react'
 import "../Assets/Css/Clubsmap.css"
 import { images } from "../Components/Images"
 import {  Button, Image } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 const clubs = [
     {
         name: "MI Club",
@@ -77,7 +77,7 @@ export const Clubsmap = () => {
                     <div className='clubcardbg'>
                         <p className='clubname'>{club.name}</p>
                         <Image src={club.img} width="80%" />
-                        <Button className='clubaddbutton'>{club.btn}</Button>
+                       <Link to="/Dashboard/game/addportfolioclub"><Button className='clubaddbutton'>{club.btn}</Button></Link>
                     </div>
 
                 )
