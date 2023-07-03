@@ -7,11 +7,12 @@ import {
   FaChartLine,
   FaCog,
   FaSignOutAlt,
-  FaChartBar,
-  FaUserCog,
+  FaRegUser,
   FaGamepad,
   FaArrowRight,
 } from "react-icons/fa";
+import { RxDashboard} from "react-icons/rx";
+import { BiFootball } from "react-icons/bi";
 import { useLogoutMutation } from "../slices/userApiSlice";
 import { logout } from "../slices/authSlice";
 import { useDispatch } from "react-redux";
@@ -64,7 +65,7 @@ const Sidebar = () => {
               };
             }}
           >
-            <FaChartBar />
+            <span className="iconsizing"><RxDashboard /></span>
             <span className="dashboard-text">Dashboard</span>
           </NavLink>
         </Nav.Item>
@@ -81,13 +82,13 @@ const Sidebar = () => {
               };
             }}
           >
-            <FaUserCog />
+            <span className="iconsizing"><FaRegUser/></span>
             <span className="dashboard-text">Manage Users</span>
           </NavLink>
         </Nav.Item>
         <Nav.Item>
           <NavLink
-            to="/dashboard/manage-content"
+            to="/dashboard/game/shootfolioclubs"
             className="nav-link"
             onClick={handleSidebarItemClick}
             style={({ isActive }) => {
@@ -98,10 +99,11 @@ const Sidebar = () => {
               };
             }}
           >
-            <FaClipboardList />
-            <span className="dashboard-text">Manage Content</span>
+            <span className="iconsizing"><BiFootball/></span>
+            <span className="dashboard-text">Shootfolio Club</span>
           </NavLink>
         </Nav.Item>
+
         <Nav.Item>
           <NavLink
             to="/dashboard/performance"
