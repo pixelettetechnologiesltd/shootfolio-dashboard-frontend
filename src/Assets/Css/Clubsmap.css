@@ -8,6 +8,7 @@
     border: 1px solid white;
     border-radius: 10px;
     width: 200px;
+    height: 280px;
     margin-top: 20px;
 }
 .maketheinrowmain{
@@ -32,7 +33,12 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    text-decoration: none;
     letter-spacing: 0em;
     text-align: center;
     color: #C8C8C8;
+}
+.clubmapremoveunderline{
+    text-decoration: none;
+    z-index: 0;
 }

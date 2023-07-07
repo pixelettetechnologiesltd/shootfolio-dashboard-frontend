@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Assets/Css/Leaguemap.css"
 import {  Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const leagues = [
     {
@@ -58,7 +59,7 @@ const Leaguemap = () => {
                     <p className='categoryitself'>{league.memtype}</p>
                 </div>
                 <div className='makeaddleaguebuttonstretch mt-3'>
-                <Button className='addleaguebutton'>{league.btn}</Button>
+                <Link className='addleaguebutton' to="/Dashboard/game/editleague">{league.btn}</Link>
                 </div>
             </div>
 

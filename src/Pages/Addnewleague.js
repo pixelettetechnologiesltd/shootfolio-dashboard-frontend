@@ -4,6 +4,7 @@ import Sidebar from "../Components/Sidebar";
 import { Container, Row, Col,Button } from "react-bootstrap";
 import { BiFootball } from "react-icons/bi";
 import Leaguemap from '../Components/Leaguemap';
+import { Link } from 'react-router-dom';
 const Addnewleague = () => {
   return (
     <div>
@@ -30,7 +31,7 @@ const Addnewleague = () => {
                 </Col>
                 <Col md={5}></Col>
                 <Col md={3} className='makebuttonalignend'>
-                    <Button href="/Dashboard/game/gameplaymode" className='addnewshhotfolioclubbutton'> + Add New League</Button>
+                    <Link to="/Dashboard/game/addnewleague"><Button className='addnewshhotfolioclubbutton'> + Add New League</Button></Link>
                 </Col>
             </Row>
             <Row>

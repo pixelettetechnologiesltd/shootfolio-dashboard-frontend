@@ -4,13 +4,13 @@
 }
 body {
   height: 100%;
-  background-color: #101323;
+  background-color: #1A1F38;
 }
 .iconsizing{
   font-size: 20px;
 }
 .flex-column{
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .nav-link {
   margin: 5px;
@@ -85,7 +85,7 @@ body {
 }
 .nav-linkSubitem {
   color: #808080;
-  padding: 10px 20px;
+  padding: 5px 20px;
   display: flex;
   align-items: center;
   text-decoration: none;

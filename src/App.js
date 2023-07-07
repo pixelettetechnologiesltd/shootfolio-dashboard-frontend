@@ -7,24 +7,27 @@ import Index from "./Pages/Index";
 import store from "./store";
 import Home from "./Pages/Home";
 import Users from "./Pages/Users";
-import ManageContent from "./Pages/ManageContent";
-import Performance from "./Pages/Performance";
 import Setting from "./Pages/Setting";
-import GameAdd from "./Pages/GameAdd";
-import GameModes from "./Pages/GameModes";
 import PrivateRoute from "./Components/PrivateRoute";
-import GameLeague from "./Pages/GameLeague";
-import ClubTeam from "./Pages/ClubTeam";
-import GameTypeView from "./Pages/GameTypeView"
-import GameModesView from "./Pages/GameModesView"
-import GameLeagueView from "./Pages/GameLeagueView"
-import ClubTeamView from "./Pages/ClubTeamView"
 import Shootfolioclubs from "./Pages/Shootfolioclubs";
 import Addnewclub from "./Pages/Addnewclub";
 import Addportfolioclub from "./Pages/Addportfolioclub";
 import Defineleaguetype from "./Pages/Defineleaguetype";
 import Addnewleague from "./Pages/Addnewleague";
+import Addgameplaymode from "./Pages/Addgameplaymode";
+import Editclub from "./Pages/Editnewclub";
+import Viewportfolio from "./Pages/Viewportfolio";
+import Editportfolioclub from "./Pages/Editportfolioclub";
+import Editleague from "./Pages/Editleague";
+import Gametype from "./Pages/Gametype";
+import Addgametype from "./Pages/Addgametype"
+import Editgametype from "./Pages/Editgametype";
+import Assetmanagement from "./Pages/Assetmanagement";
+import Subscription from "./Pages/Subscription";
 import Gameplaymode from "./Pages/Gameplaymode";
+import Editgameplaymode from "./Pages/Editgameplaymode";
+import Addsubscriptionplan from "./Pages/Addsubscriptionplan";
+import Editsubscriptionplan from "./Pages/Editsubscriptionplan ";
 function App() {
   return (
     <div className="app">
@@ -34,34 +37,37 @@ function App() {
             
               <Route path="/Dashboard/game/shootfolioclubs" element={<Shootfolioclubs/>}></Route>
               <Route path="/Dashboard/game/addnewclub" element={<Addnewclub/>}></Route>
+              <Route path="/Dashboard/game/editclub" element={<Editclub/>}></Route>
               <Route path="/Dashboard/game/addportfolioclub" element={<Addportfolioclub/>}></Route>
-              <Route path="/Dashboard/game/defineleaguetype" element={<Defineleaguetype/>}></Route>
-              <Route path="/Dashboard/game/addnewleague" element={<Addnewleague/>}></Route>
+              <Route path="/Dashboard/game/addnewleague" element={<Defineleaguetype/>}></Route>
+              <Route path="/Dashboard/game/editleague" element={<Editleague/>}></Route>
+              <Route path="/Dashboard/game/gameleague" element={<Addnewleague/>}></Route>
+              <Route path="/Dashboard/game/addgameplaymode" element={<Addgameplaymode/>}></Route>
+              <Route path="/Dashboard/game/viewportfolio" element={<Viewportfolio/>}></Route>
+              <Route path="/Dashboard/game/Editportfolioclub" element={<Editportfolioclub/>}></Route>
+              <Route path="/Dashboard/game/gametype" element={<Gametype/>}></Route>
+              <Route path="/Dashboard/game/addnewgame" element={<Addgametype/>}></Route>
+              <Route path="/Dashboard/game/editgametype" element={<Editgametype/>}></Route>
+              <Route path="/Dashboard/game/assetmanagement" element={<Assetmanagement/>}></Route>
+              <Route path="/Dashboard/game/subscription" element={<Subscription/>}></Route>
               <Route path="/Dashboard/game/gameplaymode" element={<Gameplaymode/>}></Route>
+              <Route path="/Dashboard/game/editgameplaymode" element={<Editgameplaymode/>}></Route>
+              <Route path="/Dashboard/addsubscriptionplan" element={<Addsubscriptionplan/>}></Route>
+              <Route path="/Dashboard/editsubscriptionplan" element={<Editsubscriptionplan/>}></Route>
 
 
-            <Route path="/" element={<Index />}>
+
+
+
+
+
+              <Route path="/" element={<Index />}>
               <Route path="/" element={<Login />}></Route>
               <Route path="/" element={<PrivateRoute/>}>
               <Route path="/Dashboard" element={<Home />}></Route>
               <Route path="/Dashboard/users" element={<Users />}></Route>
-              <Route
-                path="/Dashboard/manage-content"
-                element={<ManageContent />}
-              ></Route>
-              <Route
-                path="/Dashboard/performance"
-                element={<Performance />}
-              ></Route>
               <Route path="/Dashboard/setting" element={<Setting />}></Route>
-              <Route path="/Dashboard/game/game-add" element={<GameAdd/>}></Route>
-              <Route path="/Dashboard/game/view-gameType" element={<GameTypeView/>}></Route>
-              <Route path="/Dashboard/game/game-modes" element={<GameModes/>}></Route>
-              <Route path="/Dashboard/game/view-gameMode" element={<GameModesView/>}></Route>
-              <Route path="/Dashboard/game/game-league" element={<GameLeague/>}></Route>
-              <Route path="/Dashboard/game/viewgame-league" element={<GameLeagueView/>}></Route>
-              <Route path="/Dashboard/game/club-team" element={<ClubTeam/>}></Route>
-              <Route path="/Dashboard/game/view-clubteam" element={<ClubTeamView/>}></Route>
+
             </Route>
             </Route>
           </Routes>

@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import "../Assets/Css/Addportfolioclub.css"
 import InputGroup from 'react-bootstrap/InputGroup';
 import { RiExternalLinkLine } from "react-icons/ri";
-const Addportfolioinclub = () => {
+const Editportfolioinclub = () => {
   return (
     <div>
       <Menu />
@@ -25,7 +25,7 @@ const Addportfolioinclub = () => {
           <Col xs={9} sm={9} md={9} lg={10} xl={10} style={{ marginTop: "30px" }}>
             <Row className='setpaddinginnerpage'>
               <Col md={4}>
-                <p className='addportfolioinclubheadmain'>Add Portfolio in Club</p>
+                <p className='addportfolioinclubheadmain'>Edit Portfolio Club</p>
               </Col>
               <Col md={5}></Col>
             </Row>
@@ -79,4 +79,4 @@ const Addportfolioinclub = () => {
   )
 }
 
-export default Addportfolioinclub
+export default Editportfolioinclub

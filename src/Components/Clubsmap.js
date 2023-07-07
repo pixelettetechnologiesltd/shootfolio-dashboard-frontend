@@ -2,67 +2,67 @@ import React from 'react'
 import "../Assets/Css/Clubsmap.css"
 import { images } from "../Components/Images"
 import {  Button, Image } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 const clubs = [
     {
         name: "MI Club",
         img: images.clubone,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "PFC Club",
         img: images.clubtwo,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "GPJ Club",
         img: images.clubthree,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "MI Club",
         img: images.clubone,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "GPJ Club",
         img: images.clubthree,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "PFC Club",
         img: images.clubtwo,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "MI Club",
         img: images.clubone,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "PFC Club",
         img: images.clubtwo,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "GPJ Club",
         img: images.clubthree,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "MI Club",
         img: images.clubone,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "GPJ Club",
         img: images.clubthree,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
     {
         name: "PFC Club",
         img: images.clubtwo,
-        btn: "Add Portfolio",
+        btn: "View Portfolio",
     },
 ]
 
@@ -74,12 +74,12 @@ export const Clubsmap = () => {
             {
                 clubs.map(club =>
 
-                    <div className='clubcardbg'>
+                    <Link className='clubmapremoveunderline' to="/Dashboard/game/editclub"><div  className='clubcardbg'>
                         <p className='clubname'>{club.name}</p>
                         <Image src={club.img} width="80%" />
-                        <Button className='clubaddbutton'>{club.btn}</Button>
+                        <Link to="/dashboard/game/viewportfolio"><Button className='clubaddbutton'>{club.btn}</Button></Link>
                     </div>
-
+                    </Link>
                 )
             }
         </div>

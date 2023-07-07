@@ -1,74 +1,116 @@
 import React from 'react'
 import Menu from "../Components/Menu";
 import Sidebar from "../Components/Sidebar";
-import { Container, Row, Col,Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { BiFootball } from "react-icons/bi";
-import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
+import "../Assets/Css/Gameplaymode.css"
 const Gameplaymode = () => {
-  return (
-    <div>
-    <Menu/>
-<Container fluid className="sidebar">
-  <Row className="h-100">
-    <Col
-      xs={3}
-      sm={3}
-      md={3}
-      lg={2}
-      xl={2}
-      style={{ backgroundColor: "#1B1B1B" }}
-    >
-      <Sidebar></Sidebar>
-    </Col>
-    <Col xs={9} sm={9} md={9} lg={10} xl={10} style={{ marginTop: "30px" }}>
-        <Row  className='setpaddinginnerpage'>
-            <Col md={4}>
-                <div className='makebreadinrow'>
-                    <span className='breadgreenfootball'><BiFootball/></span>
-                    <p className='sootfoliobreadclub'>Define Gameplay Mode</p>
-                </div>
-            </Col>
-            <Col md={5}></Col>
-        </Row>
-        <Row>
-            <Col md={6} className='mt-4 mb-5 setmarg'>
-            <Form>
-                                    <Form.Group controlId="formFile" className="mb-4 mt-4" >
-                                        <Form.Label className="makelabelleft">Icon</Form.Label>
-                                        <Form.Control className='removebgupload' type="file" />
-                                    </Form.Group>
-                                  
-                                    <Form.Group className="mb-4" controlId="formGroupText">
-                                        <Form.Label className="makelabelleft">Game Title</Form.Label>
-                                        <Form.Control className='makeinputborder' type="text" placeholder="Game Title" />
-                                    </Form.Group>
-                                    <Form.Group controlId="formFile" className="mb-4" classNamem="makelabelandinputinline">
-                                        <Form.Label className="makelabelleft">Status</Form.Label>
-                                        <Form.Select className='makeinputborder' aria-label="Default select example">
-                                            <option>Active</option>
-                                            <option value="1">Inactive</option>
-                                            <option value="2">Coming soon</option>
-                                        </Form.Select>
-                                    </Form.Group>
-                                    <Form.Group className="mb-4" controlId="switch">
-                                        <Form.Label className="makelabelleft">Quiz Access</Form.Label>
-                                        <Form.Check 
-                                            type="switch"
-                                            id="custom-switch"
-                                            label="Quiz access on or off"
-                                        />
-                                    </Form.Group>
-                                    <div className="addgapbetween">
-                                    <Button className='createclubbutton'>Save</Button>
-                                    </div>
-                                </Form>
-            </Col>
-        </Row>
-    </Col>
-  </Row>
-</Container>
-</div>
-  )
+    return (
+        <div>
+            <Menu />
+            <Container fluid className="sidebar">
+                <Row className="h-100">
+                    <Col
+                        xs={3}
+                        sm={3}
+                        md={3}
+                        lg={2}
+                        xl={2}
+                        style={{ backgroundColor: "#1B1B1B" }}
+                    >
+                        <Sidebar></Sidebar>
+                    </Col>
+                    <Col xs={9} sm={9} md={9} lg={10} xl={10} style={{ marginTop: "30px" }}>
+                        <Row className='setpaddinginnerpage'>
+                            <Col md={4}>
+                                <div className='makebreadinrow'>
+                                    <span className='breadgreenfootball'><BiFootball /></span>
+                                    <p className='sootfoliobreadclub'>Game Mode</p>
+                                </div>
+                            </Col>
+                            <Col md={5}></Col>
+                            <Col md={3} className='makebuttonalignend'>
+                                <Link to="/Dashboard/game/addgameplaymode"><Button className='addnewshhotfolioclubbutton'> + Add New Game</Button></Link>
+                            </Col>
+                        </Row>
+                        <Row className='mt-5'>
+                            <Col md={2}></Col>
+                            <Col md={8}>
+                            <div className='gamemodebg'>
+                                
+                                <Col md={6}>
+                                    <p className='gamemodename'>Idle (Player vs Machine)</p>
+                                </Col>
+                                <Col md={3}>
+                                    <p className='gameduration'><span className='modedurationtitle'></span>7 Days</p>
+                                </Col>
+                                <Col md={3}>
+                                    <Link to="/Dashboard/game/editgameplaymode"><Button className='gamdemodeeditbutton'>Edit</Button></Link>
+                                </Col>
+                            </div>
+                            </Col>
+                            <Col md={2}></Col>
+                        </Row>
+                        <Row className='mt-3'>
+                            <Col md={2}></Col>
+                            <Col md={8}>
+                            <div className='gamemodebg'>
+                                
+                                <Col md={6}>
+                                    <p className='gamemodename'>Idle (Player vs Machine)</p>
+                                </Col>
+                                <Col md={3}>
+                                    <p className='gameduration'><span className='modedurationtitle'></span>7 Days</p>
+                                </Col>
+                                <Col md={3}>
+                                <Link to="/Dashboard/game/editgameplaymode"><Button className='gamdemodeeditbutton'>Edit</Button></Link>
+                                </Col>
+                            </div>
+                            </Col>
+                            <Col md={2}></Col>
+                        </Row>
+                        <Row className='mt-3'>
+                            <Col md={2}></Col>
+                            <Col md={8}>
+                            <div className='gamemodebg'>
+                                
+                                <Col md={6}>
+                                    <p className='gamemodename'>Idle (Player vs Machine)</p>
+                                </Col>
+                                <Col md={3}>
+                                    <p className='gameduration'><span className='modedurationtitle'></span>90 mins</p>
+                                </Col>
+                                <Col md={3}>
+                                <Link to="/Dashboard/game/editgameplaymode"><Button className='gamdemodeeditbutton'>Edit</Button></Link>
+                                </Col>
+                            </div>
+                            </Col>
+                            <Col md={2}></Col>
+                        </Row>
+                        <Row className='mt-3'>
+                            <Col md={2}></Col>
+                            <Col md={8}>
+                            <div className='gamemodebg'>
+                                
+                                <Col md={6}>
+                                    <p className='gamemodename'>Multiplayer Realtime (5 Player vs 5 Player)</p>
+                                </Col>
+                                <Col md={3}>
+                                    <p className='gameduration'><span className='modedurationtitle'></span>90 mins</p>
+                                </Col>
+                                <Col md={3}>
+                                <Link to="/Dashboard/game/editgameplaymode"><Button className='gamdemodeeditbutton'>Edit</Button></Link>
+                                </Col>
+                            </div>
+                            </Col>
+                            <Col md={2}></Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
 }
 
 export default Gameplaymode

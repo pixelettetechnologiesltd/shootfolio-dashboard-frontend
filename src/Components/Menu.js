@@ -1,8 +1,6 @@
 import React from 'react'
-import { Row, Col, Button, Image } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
+import { Row, Col, Image } from "react-bootstrap";
 import "../Assets/Css/Menu.css"
-import { BsSearch } from "react-icons/bs";
 import { images } from "../Components/Images";
 import { BiBell } from "react-icons/bi";
 const Menu = () => {
@@ -13,19 +11,7 @@ const Menu = () => {
           <a className="removelinefromlogo" href="/"><p className="logohead">Shootfolio</p></a>
         </Col>
         <Col md={5} xs={4} className="p-0">
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">
-              <span className="iconheaderform">
-                <BsSearch />
-              </span>
-            </Button>
-          </Form>
+         
         </Col>  
         <Col md={2} xs={0}></Col>
         <Col md={3} xs={5}>

@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "../Assets/Css/Sidebar.css";
-import { Nav, Button } from "react-bootstrap";
+import { Nav, Image } from "react-bootstrap";
+import { images } from "./Images";
 import { NavLink } from "react-router-dom";
+import { BsClipboard2Data } from "react-icons/bs";
+import { GiJugglingClubs } from "react-icons/gi";
+import { GiGamepadCross } from "react-icons/gi";
+import { BiJoystick } from "react-icons/bi";
+import { FiSettings } from "react-icons/fi";
+import { MdOutlineWorkspacePremium} from "react-icons/md";
+import { GiAmericanFootballPlayer } from "react-icons/gi";
 import {
-  FaClipboardList,
-  FaChartLine,
-  FaCog,
-  FaSignOutAlt,
   FaRegUser,
-  FaGamepad,
-  FaArrowRight,
 } from "react-icons/fa";
 import { RxDashboard} from "react-icons/rx";
-import { BiFootball } from "react-icons/bi";
 import { useLogoutMutation } from "../slices/userApiSlice";
 import { logout } from "../slices/authSlice";
 import { useDispatch } from "react-redux";
@@ -86,6 +87,7 @@ const Sidebar = () => {
             <span className="dashboard-text">Manage Users</span>
           </NavLink>
         </Nav.Item>
+      
         <Nav.Item>
           <NavLink
             to="/dashboard/game/shootfolioclubs"
@@ -99,14 +101,14 @@ const Sidebar = () => {
               };
             }}
           >
-            <span className="iconsizing"><BiFootball/></span>
+            <span className="iconsizing"><GiJugglingClubs/></span>
             <span className="dashboard-text">Shootfolio Club</span>
           </NavLink>
         </Nav.Item>
 
         <Nav.Item>
           <NavLink
-            to="/dashboard/performance"
+            to="/Dashboard/game/gametype"
             className="nav-link"
             onClick={handleSidebarItemClick}
             style={({ isActive }) => {
@@ -117,15 +119,16 @@ const Sidebar = () => {
               };
             }}
           >
-            <FaChartLine />
-            <span className="dashboard-text">Performance</span>
+          <span className="iconsizing"><GiAmericanFootballPlayer/></span>
+            <span className="dashboard-text">Game Type</span>
           </NavLink>
         </Nav.Item>
+
         <Nav.Item>
           <NavLink
-            onClick={handleSubMenuToggle}
-            to="/dashboard/game"
+            to="/Dashboard/game/gameleague"
             className="nav-link"
+            onClick={handleSidebarItemClick}
             style={({ isActive }) => {
               return {
                 fontWeight: isActive ? "bold" : "",
@@ -134,157 +137,82 @@ const Sidebar = () => {
               };
             }}
           >
-            <FaGamepad />
-            <span className="dashboard-text">Game Setup</span>  
+            <span className="iconsizing"><GiGamepadCross/></span>
+            <span className="dashboard-text">Game League</span>
           </NavLink>
-          <div className={`subMenu${isSubMenuVisible ? "show" : "hide"}`}>
-            {isSubMenuVisible && (
-              <>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/game-add"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">Game Type</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/view-gameType"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">View Game Type</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/game-modes"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">Game Mode</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/view-gameMode"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">View Game Mode</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/game-league"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">Game Leagues</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/viewgame-league"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">View Game Leagues</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/club-team"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">Club Team</span>
-                  </NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                  <NavLink
-                    to="/dashboard/game/view-clubteam"
-                    className="nav-linkSubitem"
-                    style={({ isActive }) => {
-                      return {
-                        color: isActive ? "white" : "#808080",
-                      };
-                    }}
-                  >
-                    <FaArrowRight style={{ marginRight: "5px" }} />
-                    <span className="dashboard-text">View Club Team</span>
-                  </NavLink>
-                </Nav.Item>
-              </>
-            )}
-          </div>
         </Nav.Item>
-      
-        <div className="settings">
-          <Nav.Item>
-            <NavLink
-              to="/dashboard/setting"
-              className="nav-link"
-              style={({ isActive }) => {
-                return {
-                  fontWeight: isActive ? "bold" : "",
-                  color: isActive ? "black" : "#808080",
-                  backgroundColor: isActive ? "#2A7741" : "",
-                };
-              }}
-            >
-              <FaCog />
-              <span className="dashboard-text">Settings</span>
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <Button
-              style={{ width: "90%" }}
-              onClick={handleLogout}
-              className="nav-link"
-            >
-              <FaSignOutAlt />
-              <span className="dashboard-text">Logout</span>
-            </Button>
-          </Nav.Item>
-        </div>
+
+        <Nav.Item>
+          <NavLink
+            to="/Dashboard/game/gameplaymode"
+            className="nav-link"
+            onClick={handleSidebarItemClick}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><BiJoystick/></span>
+            <span className="dashboard-text">Gameplay Mode</span>
+          </NavLink>
+        </Nav.Item>
+
+        <Nav.Item>
+          <NavLink
+            to="/Dashboard/game/subscription"
+            className="nav-link"
+            onClick={handleSidebarItemClick}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><MdOutlineWorkspacePremium/></span>
+            <span className="dashboard-text">Subscription Plans</span>
+          </NavLink>
+        </Nav.Item>
+
+
+        <Nav.Item>
+          <NavLink
+            to="/Dashboard/game/assetmanagement"
+            className="nav-link"
+            onClick={handleSidebarItemClick}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><BsClipboard2Data /></span>
+            <span className="dashboard-text">Asset Management</span>
+          </NavLink>
+        </Nav.Item>
+        <Nav.Item>
+          <NavLink
+            to="/Dashboard/setting"
+            className="nav-link"
+            onClick={handleSidebarItemClick}
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "black" : "#808080",
+                backgroundColor: isActive ? "#2A7741" : "",
+              };
+            }}
+          >
+            <span className="iconsizing"><FiSettings /></span>
+            <span className="dashboard-text">Settings</span>
+          </NavLink>
+        </Nav.Item>
       </Nav>
     </>
   );

@@ -5,10 +5,12 @@ import ApexCharts from "../charts/ApexChart";
 import ColumnChart from "../charts/ColumnChart";
 import BrandingChart from "../charts/BrandingChart";
 import Sidebar from "../Components/Sidebar";
+import Menu from "../Components/Menu";
 
 const Home = () => {
   return (
     <div>
+      <Menu/>
       <Container fluid className="sidebar">
         <Row>
           <Col
@@ -18,7 +20,7 @@ const Home = () => {
             lg={2}
             xl={2}
             style={{ backgroundColor: "#1B1B1B" }}
-            className="h-100">
+            >
            <Sidebar></Sidebar>
           </Col>
           <Col xs={9} sm={9} md={9} lg={10} xl={10}>

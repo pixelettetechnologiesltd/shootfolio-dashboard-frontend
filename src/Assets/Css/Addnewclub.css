@@ -21,14 +21,16 @@
 .makeinputborder, .makeinputborder:focus{
     border: 2px solid #BDBDBD;
     background-color: transparent;
-    color: #adadad;
-    border-top-right-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
+    color: #adadad ;
+    padding: 10px;
     border-radius: 10px !important;
+}
+.form-control {
+    color:#adadad;
 }
 .removebgupload, .removebgupload:focus{
     background-color: transparent;
-    
+    border: none;   
 }
 label.form-check-label{
     color: #858585 !important;
